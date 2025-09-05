@@ -1,0 +1,14 @@
+5.9.2025 - Friday - Output Power Need 
+
+The project will be an on-board charger application. It will be mainly used by YTU AESK prototype cars. In addition to that mobility solutions like Citroen AMI and Renault Twizy use 48-60V battery packs. YTU AESK prototype car's battery's maximum voltage will probably be at the 100-120V range.
+
+The battery cells possibily will be used are Aspilsan INR18650A28 and Molicel INR-18650-P30B models.
+
+INR18650A28 has 4A maximum charging current rating.
+INR-18650-P30B has 3A charging current rating.
+
+The battery pack probably be a 2 to 4 parallel configuration. So the pack can take roughly 6 to 16A of charging current. The datasheets state that these cells should be at least 2,5V on idle. The Efficiency Challenge wants an on-board charger that can charge the battery pack by at least 500W of power. 
+
+At this rate, we are looking at a system that needs to output 120V maximum voltage and 10A maximum current. These values doesn't need to be at same time. At 60V charger must output 10A but at 120V 5A should be enough. 
+
+In conclusion with offset margins, we should build a system that has a maximum output voltage of 150V-5A and can resist to 10A of output. The output power will be 750 to 800W. Along the way if i see the need the output power can be increased.  

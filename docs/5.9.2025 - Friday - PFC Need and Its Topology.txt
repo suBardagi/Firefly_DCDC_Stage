@@ -1,0 +1,13 @@
+5.9.2025 - Friday - PFC Need and Its Topology
+
+Due to the sheer need of challenge and help the DC-DC stage run comfortabily, a PFC circuit is on the table. At the moment it is not decided that the PFC and DC-DC will be on the same PCB or seperate PCBs. 
+
+For the 750 to 800W range bridgeless topologies can be overkill. But for high frequency switching and less losses we will go down in that road. Our switching frequency will be 250-500kHz. The exact frequency will be determined with the simulations. 
+
+For bridgeless PFC unit, totem-pole topology can be used. It is basically a boost converter that switches polarity. We said that our output power will be 750-800W. Because of that with margins, our PFC should be capable of outputting 1kW of power. 
+
+For the control of the PFC there will be 2 options. If the main control can't handle both DC-DC and PFC circuit control, NCP1681 IC can be used to control the circuit. But IC can only handle 65 to 95kHz of frequency, so the frequency will drop significantly. 
+
+Power Integrations is a valuable alternative but they are not powerful enough. Also i personally don't think i can get their products easily.
+
+In conclusion, a totem-pole topology will be used. For the fast leg we can use the same MOSFETs as the DC-DC converter. For the slow leg diodes can be used. We will determine to use MOSFET or diode for the fast leg swithes. 
