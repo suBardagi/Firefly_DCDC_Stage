@@ -1,0 +1,9 @@
+6.9.2025 - Saturday - DC-DC Topologies
+
+Because of the better usage of magnetics, LLC topologies are considered. Amongst the topologies, there are 3 of them that can be applied: standart half bridge LLC, full bridge LLC or a 3 level FC LLC. 
+
+With the need of a PFC circuit, full bridge LLC will be a burden because of switch count. Half bridge and 3 level FC are more solid options. 
+
+If the design goes with the half bridge decision, there should be a seperate PFC circuit, but with the 3 level FC there is no need for an external PFC circuit. 
+
+In the end, for simulation purposes, a 3 level FC will be the way to go for now. But it is not a sign that half bridge LLC is ditched, it is still a strong runner. The documents for the topologies will be served with this commit.  
