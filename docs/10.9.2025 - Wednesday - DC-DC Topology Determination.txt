@@ -1,0 +1,5 @@
+10.9.2025 - Wednesday - DC-DC Topology Determination
+
+For simulation purposes, the topologies which will be worked on are half-bridge llc and 3-level FCMC LLC. The component selection will be done according to this. For simulation only power components like MOSFETs will be selected. Other components like sensors etc. will be determined later. 
+
+For the 3-level FCMC, output voltage should be examined carefully. Im still not sure it fits the application as a single stage with PFC.
