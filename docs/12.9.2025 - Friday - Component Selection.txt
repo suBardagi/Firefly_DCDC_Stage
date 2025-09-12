@@ -1,0 +1,25 @@
+12.9.2025 - Friday - Component Selection
+
+There will be several component configurations int he simulation studies.
+
+Combination - 1
+
+PFC topology : Boost PFC - DC/DC Topology: Half Bridge LLC or 3-level FC LLC
+
+-Primarily constructed around "PFS7539H-L" by Power Integrations. 
+-Switching frequency will be 100kHz.(Because of the PFC IC)
+-DC/DC topology will most likely switch at 100kHz also.(EMI reasons)
+-System will be bulkier because of DC-Link and heavier magnetics/filters.
+-For the MOSFET switches and gate driver circuitry there are 2 combinations. 
+--Same MOSFETs and gate drivers can be used or they can be switched to "LMG3522R030" by Texas Instruments.
+
+Combination -2 
+
+AC/DC Topology : 3-level FCMC LLC 
+
+-Switching frequency can be much higher.(250-500kHz range)
+-System will be smaller because of the single stage.
+-MOSFET and gate will be "LMG3522R030" by Texas Instruments.
+-There will be no seperate PFC but the control will be more complex.
+
+**Datasheets of PFS7539H-L and LMG3522R030 will be given with this commit. 
