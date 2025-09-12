@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Monday, October 03, 2022 16:00:25
+STATUS: C:\Cadence\SPB_17.4\tools\bin\sch2cap -f "C:\Prasanna\GaN\Data\pspice model\Online\Model editor\10_03_22_Boxster30\LMG3522R030.lib" -o "C:\Prasanna\GaN\Data\pspice model\Online\Model editor\10_03_22_Boxster30\LMG3522R030.olb" -i C:\SPB_Data\.\cdssetup\OrCAD_PSpice/17.4.0/PSpice.ini
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_17.4\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Prasanna\GaN\Data\pspice model\Online\Model editor\10_03_22_Boxster30\LMG3522R030.olb'.
+STATUS: Translator stopped at Monday, October 03, 2022 16:00:26
+STATUS: 0 Error messages, 0 Warning messages

@@ -1,0 +1,590 @@
+
+**** 12/12/22 14:42:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../iso7710.lib" 
+.LIB "../../../lmg3522r030.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1500us 1400us 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SYNCHRONOUS BUCK_NEW
+L_L2         N00508 N104989  4.7uH  
+R_Rload6         N00508 N105255  1000 TC=0,0 
+R_Rload7         N00508 N105267  200k TC=0,0 
+R_Rload8         N00508 N105279  200k TC=0,0 
+C_C10         N00508 N104996  10u  TC=0,0 
+V_V4         N00382 0 DC 0 AC 0
++PULSE 0 400 350u 2000u 1u 10000 10000
+V_V5         N41977 N00508 DC 0 AC 0
++PULSE 0 14 0 2u 1u 10000 20000
+V_V6         N55997 0 DC 0 AC 0
++PULSE 0 12 0 2u 1u 10000 20000
+V_V7         N77423 0 DC 0 AC 0
++PULSE 0 5 0u 1n 1n 4.98u 10u
+L_L3         0 N56082  4.7uH  
+C_C12         0 N56075  10u  TC=0,0 
+R_Rload11         0 N56822  22 TC=0,0 
+R_Rload13         0 N106523  200k TC=0,0 
+R_Rload12         0 N106519  1000 TC=0,0 
+R_Rload14         0 N106527  200k TC=0,0 
+X_U3         N70217 N64230 0 N78009 N64141 N00508 ISO7710 
+L_L4         N00508 N56822  70uH  
+C_C14         0 N56822  100u  TC=0,0 
+V_V8         N70217 0 DC 0 AC 0
++PULSE 0 5 10n 2u 1u 10000 20000
+X_U4         N70217 N77423 0 N70217 N77530 0 ISO7710 
+R_Rload17         N83421 N00382  1 TC=0,0 
+V_V9         N64230 0 DC 0 AC 0
++PULSE 0 5 5u 1n 1n 4.98u 10u
+C_C15         N106107 0  10u  TC=0,0 
+R_Rload18         0 N56249  20k TC=0,0 
+R_Rload19         N00508 N104983  20k TC=0,0 
+X_U5         N55997 N106107 N77530 N56249 N56082 N56075 N106519 N106523 N106527
++  0 0 N00508 LMG3522R030 PARAMS:  TEMP_CELSIUS=160
+X_U6         N41977 N78009 N64141 N104983 N104989 N104996 N105255 N105267
++  N105279 N00508 N00508 N83421 LMG3522R030 PARAMS:  TEMP_CELSIUS=160
+
+**** RESUMING test2.cir ****
+.END
+
+
+WARNING(ORPSIM-15223): Library file C:\cds_spb_home\cdssetup\pspTILibDir\nom_pspti.lib has changed since index file nom_pspti.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Wed Dec  7 13:21:03 2022 to Thu Mar 17 00:44:58 2022.
+
+INFO(ORPSIM-15422): Making new index file nom_pspti.ind for library file nom_pspti.lib.
+
+Index has 87558 entries from 4435 file(s).
+
+INFO(ORPSIM-15423): Unable to find index file nom.ind for library file nom.lib.
+
+INFO(ORPSIM-15422): Making new index file nom.ind for library file nom.lib.
+
+Index has 517 entries from 5 file(s).
+
+WARNING(ORPSIM-15256): <X_U5.X_UTOP_U_GAN_FET.T> not a subcircuit param
+
+WARNING(ORPSIM-15256): <X_U6.X_UTOP_U_GAN_FET.T> not a subcircuit param
+
+**** 12/12/22 14:42:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Supplies2_UBB_U14.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Driver_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Driver_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_GAN_FET.DIDEAL 
+          IS    1.000000E-12 
+           N     .145        
+          RS  100.000000E-06 
+         CJO  100.000000E-15 
+
+
+               X_U5.X_UTOP_U_GAN_FET.Dbt 
+          IS   25.000000E-12 
+           N   11.27         
+          BV  600            
+          RS    1.850000E-03 
+          TT   10.000000E-12 
+         CJO   99.000000E-15 
+          VJ     .8          
+           M     .35         
+
+
+               X_U6.X_UTOP_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Supplies2_UBB_U14.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Driver_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Driver_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_GAN_FET.DIDEAL 
+          IS    1.000000E-12 
+           N     .145        
+          RS  100.000000E-06 
+         CJO  100.000000E-15 
+
+
+               X_U6.X_UTOP_U_GAN_FET.Dbt 
+          IS   25.000000E-12 
+           N   11.27         
+          BV  600            
+          RS    1.850000E-03 
+          TT   10.000000E-12 
+         CJO   99.000000E-15 
+          VJ     .8          
+           M     .35         
+
+
+**** 12/12/22 14:42:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U_GAN_FET._M1_modX 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1.5          
+          KP   10            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+          UO  400            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_U6.X_UTOP_U_GAN_FET._M1_modX 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1.5          
+          KP   10            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+          UO  400            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 12/12/22 14:42:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U_Ilim1_S20._UTOP_U_Ilim1_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U62.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_S18._UTOP_U_Ilim1_S18 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U63.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_S17._UTOP_U_Ilim1_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_S19._UTOP_U_Ilim1_S19 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U119.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_U117.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Supplies2_UBB_S17._UTOP_U_Supplies2_UBB_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Driver_S19._UTOP_U_Driver_S19 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U5.X_UTOP_U_Driver_S20._UTOP_U_Driver_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .1          
+
+
+               X_U6.X_UTOP_U_Ilim1_S20._UTOP_U_Ilim1_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U62.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_S18._UTOP_U_Ilim1_S18 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U63.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_S17._UTOP_U_Ilim1_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_S19._UTOP_U_Ilim1_S19 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U119.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_U117.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Supplies2_UBB_S17._UTOP_U_Supplies2_UBB_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Driver_S19._UTOP_U_Driver_S19 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U6.X_UTOP_U_Driver_S20._UTOP_U_Driver_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .1          
+
+
+               X_U3.XU5.X_S2._S2 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF     .8          
+
+
+               X_U3.XU5.X_S1._S1 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U3.XU5.X_S3._S3 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.XU5.X_S2._S2 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF     .8          
+
+
+               X_U4.XU5.X_S1._S1 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.XU5.X_S3._S3 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_GAN_FET.X_S17._S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_GAN_FET.X_S17._S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U5.V_UTOP_U_PWM_Temp_VRAMP1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U6.V_UTOP_U_PWM_Temp_VRAMP1.
+
+ERROR(ORPSIM-16583): Detected an imported model containing transistors or diodes. For such models, PSpice for TI supports a minimum of one and maximum of three traces. Reduce the number of traces and simulate again.
+
+
+ABORTING SIMULATION
+**** 12/12/22 14:42:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =          23
+  External (NCNODS)                 =         600
+  Total (NUMNOD)                    =         648
+
+Total device count (NUMEL)          =         940
+  Capacitors (C)                    =         192
+  Diodes (D)                        =          40
+  VCVS (E)                          =         264
+  CCCS (F)                          =           4
+  VCCS (G)                          =          18
+  CCVS (H)                          =           4
+  Current Sources (I)               =           4
+  Inductors (L)                     =           3
+  MosFETs (M)                       =           2
+  Resistors (R)                     =         284
+  VSwitches (S)                     =          30
+  TLines (T)                        =           2
+  Voltage Sources (V)               =          90
+
+Number of subcircuits (X)           =         168
+
+Matrix statistics:
+  Matrix size (NSTOP)               =        1013
+  Initial no. elements (NTTAR)      =        2519
+  No. elements w/ fillin (NTTBR)    =        2519
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      99.755
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =       19.44
+  General setup                     =         .03
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .06
+  License check-out time            =         .52
+  Total job time (using Solver 1)   =       19.47
+

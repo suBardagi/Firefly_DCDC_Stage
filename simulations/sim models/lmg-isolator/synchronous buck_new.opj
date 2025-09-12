@@ -1,0 +1,97 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2022 S008-[11/08/22]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\lmg3522r030.olb"
+        (Type "Schematic Library")))
+    (Allegro Netlist Directory "allegro")
+    (File ".\synchronous buck_new.DSN"
+      (Type "Schematic Design")
+      (DisplayName ".\synchronous buck_new.DSN"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\synchronous buck_new-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.net"
+      (Type "Report")
+      (DisplayName
+         ".\synchronous buck_new-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.net")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\synchronous buck_new-pspicefiles\schematic1\test2.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\synchronous buck_new-PSpiceFiles\SCHEMATIC1\test2.sim"
+        (DisplayName "SCHEMATIC1-test2")
+        (Type "PSpice Profile")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\iso7710.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\iso7710.lib"))
+      (File ".\lmg3522r030.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\lmg3522r030.lib"))))
+  (Folder "Logs")
+  (MPSSessionName "a0488390")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new.DSN")
+      (Path "Design Resources"
+         "C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new.DSN"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new.DSN"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 276 0 755"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1192 24 773")
+        (Scroll "-92 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\A0488390\DOCUMENTS\BITBUCKET_REPOS\LMG3522R030\LMG3522R030_PSPICE\SYNCHRONOUS BUCK_NEW.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (PartMRUSelector
+    (LMG3522R030
+      (FullPartName "LMG3522R030.Normal")
+      (LibraryName
+         "C:\PRASANNA\GAN\DATA\PSPICE MODEL\ONLINE\MODEL EDITOR\10_03_22_BOXSTER30\LMG3522R030.OLB")
+      (DeviceIndex "0"))
+    (LMG3422R050
+      (FullPartName "LMG3422R050.Normal")
+      (LibraryName
+         "C:\PRASANNA\GAN\DATA\PSPICE MODEL\ONLINE\MODEL EDITOR\10_03_OSPREY50\LMG3422R050.OLB")
+      (DeviceIndex "0"))
+    (LMG3422R030
+      (FullPartName "LMG3422R030.Normal")
+      (LibraryName
+         "C:\PRASANNA\GAN\DATA\PSPICE MODEL\ONLINE\MODEL EDITOR\10_03_22\LMG3422R030.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Prasanna\GaN\Data\pspice model\Online\Model editor\10_03_Osprey50"))

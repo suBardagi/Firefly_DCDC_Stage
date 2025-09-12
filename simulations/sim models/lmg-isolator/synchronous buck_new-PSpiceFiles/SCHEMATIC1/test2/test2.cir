@@ -1,0 +1,24 @@
+** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PSpiceFiles\SCHEMATIC1\test2.sim ] 
+
+** Creating circuit file "test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../iso7710.lib" 
+.LIB "../../../lmg3522r030.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1500us 1400us 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([N00508])
+.PROBE64 N([0])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

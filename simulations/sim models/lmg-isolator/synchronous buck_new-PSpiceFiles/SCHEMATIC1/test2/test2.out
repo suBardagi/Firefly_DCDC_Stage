@@ -1,0 +1,1653 @@
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../iso7710.lib" 
+.LIB "../../../lmg3522r030.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1500us 1400us 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([N00508])
+.PROBE64 N([0])
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SYNCHRONOUS BUCK_NEW
+L_L2         N00508 N104989  4.7uH  
+R_Rload6         N00508 N105255  1000 TC=0,0 
+R_Rload7         N00508 N105267  200k TC=0,0 
+R_Rload8         N00508 N105279  200k TC=0,0 
+C_C10         N00508 N104996  10u  TC=0,0 
+V_V4         N00382 0 DC 0 AC 0
++PULSE 0 400 350u 2000u 1u 10000 10000
+V_V5         N41977 N00508 DC 0 AC 0
++PULSE 0 14 0 2u 1u 10000 20000
+V_V6         N55997 0 DC 0 AC 0
++PULSE 0 12 0 2u 1u 10000 20000
+V_V7         N77423 0 DC 0 AC 0
++PULSE 0 5 0u 1n 1n 4.98u 10u
+L_L3         0 N56082  4.7uH  
+C_C12         0 N56075  10u  TC=0,0 
+R_Rload11         0 N56822  22 TC=0,0 
+R_Rload13         0 N106523  200k TC=0,0 
+R_Rload12         0 N106519  1000 TC=0,0 
+R_Rload14         0 N106527  200k TC=0,0 
+X_U3         N70217 N64230 0 N78009 N64141 N00508 ISO7710 
+L_L4         N00508 N56822  70uH  
+C_C14         0 N56822  100u  TC=0,0 
+V_V8         N70217 0 DC 0 AC 0
++PULSE 0 5 10n 2u 1u 10000 20000
+X_U4         N70217 N77423 0 N70217 N77530 0 ISO7710 
+R_Rload17         N83421 N00382  1 TC=0,0 
+V_V9         N64230 0 DC 0 AC 0
++PULSE 0 5 5u 1n 1n 4.98u 10u
+C_C15         N106107 0  10u  TC=0,0 
+R_Rload18         0 N56249  20k TC=0,0 
+R_Rload19         N00508 N104983  20k TC=0,0 
+X_U5         N55997 N106107 N77530 N56249 N56082 N56075 N106519 N106523 N106527
++  0 0 N00508 LMG3522R030 PARAMS:  TEMP_CELSIUS=160
+X_U6         N41977 N78009 N64141 N104983 N104989 N104996 N105255 N105267
++  N105279 N00508 N00508 N83421 LMG3522R030 PARAMS:  TEMP_CELSIUS=160
+
+**** RESUMING test2.cir ****
+.END
+
+WARNING(ORPSIM-15256): <X_U5.X_UTOP_U_GAN_FET.T> not a subcircuit param
+
+WARNING(ORPSIM-15256): <X_U6.X_UTOP_U_GAN_FET.T> not a subcircuit param
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Supplies2_UBB_U14.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Driver_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_Driver_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U5.X_UTOP_U_GAN_FET.DIDEAL 
+          IS    1.000000E-12 
+           N     .145        
+          RS  100.000000E-06 
+         CJO  100.000000E-15 
+
+
+               X_U5.X_UTOP_U_GAN_FET.Dbt 
+          IS   25.000000E-12 
+           N   11.27         
+          BV  600            
+          RS    1.850000E-03 
+          TT   10.000000E-12 
+         CJO   99.000000E-15 
+          VJ     .8          
+           M     .35         
+
+
+               X_U6.X_UTOP_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Supplies2_UBB_U14.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Driver_U7.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_Driver_U8.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U6.X_UTOP_U_GAN_FET.DIDEAL 
+          IS    1.000000E-12 
+           N     .145        
+          RS  100.000000E-06 
+         CJO  100.000000E-15 
+
+
+               X_U6.X_UTOP_U_GAN_FET.Dbt 
+          IS   25.000000E-12 
+           N   11.27         
+          BV  600            
+          RS    1.850000E-03 
+          TT   10.000000E-12 
+         CJO   99.000000E-15 
+          VJ     .8          
+           M     .35         
+
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U_GAN_FET._M1_modX 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1.5          
+          KP   10            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+          UO  400            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+               X_U6.X_UTOP_U_GAN_FET._M1_modX 
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1.5          
+          KP   10            
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+          UO  400            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.X_UTOP_U_Ilim1_S20._UTOP_U_Ilim1_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U62.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_S18._UTOP_U_Ilim1_S18 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U63.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_S17._UTOP_U_Ilim1_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_S19._UTOP_U_Ilim1_S19 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Ilim1_U119.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Ilim1_U117.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U5.X_UTOP_U_Supplies2_UBB_S17._UTOP_U_Supplies2_UBB_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_Driver_S19._UTOP_U_Driver_S19 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U5.X_UTOP_U_Driver_S20._UTOP_U_Driver_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .1          
+
+
+               X_U6.X_UTOP_U_Ilim1_S20._UTOP_U_Ilim1_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U62.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_S18._UTOP_U_Ilim1_S18 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U63.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_S17._UTOP_U_Ilim1_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_S19._UTOP_U_Ilim1_S19 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Ilim1_U119.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Ilim1_U117.S1 
+         RON    1            
+        ROFF    1.000000E+09 
+         VON     .75         
+        VOFF     .25         
+
+
+               X_U6.X_UTOP_U_Supplies2_UBB_S17._UTOP_U_Supplies2_UBB_S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_Driver_S19._UTOP_U_Driver_S19 
+         RON    1.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U6.X_UTOP_U_Driver_S20._UTOP_U_Driver_S20 
+         RON    7.000000E-03 
+        ROFF    1.000000E+09 
+         VON     .9          
+        VOFF     .1          
+
+
+               X_U3.XU5.X_S2._S2 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF     .8          
+
+
+               X_U3.XU5.X_S1._S1 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U3.XU5.X_S3._S3 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.XU5.X_S2._S2 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF     .8          
+
+
+               X_U4.XU5.X_S1._S1 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.XU5.X_S3._S3 
+         RON     .01         
+        ROFF    5.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U5.X_UTOP_U_GAN_FET.X_S17._S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U6.X_UTOP_U_GAN_FET.X_S17._S17 
+         RON    7.000000E-03 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U5.V_UTOP_U_PWM_Temp_VRAMP1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U6.V_UTOP_U_PWM_Temp_VRAMP1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U5.V_UTOP_U_PWM_Temp_VRAMP1.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for X_U6.V_UTOP_U_PWM_Temp_VRAMP1.
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00382)    0.0000 (N00508)-17.76E-09 (N41977)-17.76E-09 (N55997)    0.0000     
+
+(N56075)-155.6E-09 (N56082)    0.0000 (N56249)    1.2000 (N56822)-17.76E-09     
+
+(N64141)-17.25E-09 (N64230)    0.0000 (N70217)    0.0000 (N77423)    0.0000     
+
+(N77530)-45.04E-27 (N78009)-17.76E-09 (N83421) 85.55E-09 (X_U3.1)    0.0000     
+
+(X_U3.2)    2.0000 (X_U3.3)    0.0000 (X_U3.4)    2.0000 (X_U3.5)    0.0000     
+
+(X_U3.6)    0.0000 (X_U3.7)    0.0000 (X_U3.8)    0.0000 (X_U3.9)    0.0000     
+
+(X_U4.1)    0.0000 (X_U4.2)    2.0000 (X_U4.3)    0.0000 (X_U4.4)    2.0000     
+
+(X_U4.5)    0.0000 (X_U4.6)    0.0000 (X_U4.7)    0.0000 (X_U4.8)    0.0000     
+
+(X_U4.9)    0.0000 (N104983)    1.2000                   (N104989)-17.76E-09    
+
+(N104996)-173.3E-09                   (N105255)    5.0000                       
+
+(N105267)    5.0000                   (N105279)-17.76E-09                       
+
+(N106107)    0.0000                   (N106519)    5.0000                       
+
+(N106523)    5.0000                   (N106527)    0.0000                       
+
+(X_U3.10)    0.0000                   (X_U4.10)    0.0000                       
+
+(X_U3.DEL_IN)    0.0000               (X_U4.DEL_IN)    0.0000                   
+
+(X_U3.DEL_OUT)    0.0000              (X_U4.DEL_OUT)    0.0000                  
+
+(X_U3.VCC1_INT)    0.0000             (X_U3.VCC2_INT)    0.0000                 
+
+(X_U3.XU5.DRVB)  -10.0000             (X_U4.VCC1_INT)    0.0000                 
+
+(X_U4.VCC2_INT)    0.0000             (X_U4.XU5.DRVB)  -10.0000                 
+
+(X_U3.XU5.HIGHI)    1.0000            (X_U4.XU5.HIGHI)    1.0000                
+
+(X_U5.N16888265)    0.0000            (X_U5.N16890507)    0.0000                
+
+(X_U6.N16888265)    0.0000            (X_U6.N16890507)    0.0000                
+
+(X_U5.UTOP_PGOOD)    0.0000           (X_U5.UTOP_VDDCL)    0.0000               
+
+(X_U6.UTOP_PGOOD)    0.0000           (X_U6.UTOP_VDDCL)-17.76E-09               
+
+(X_U3.XU1.VCC_INT)    0.0000          (X_U3.XU2.VCC_INT)    0.0000              
+
+(X_U4.XU1.VCC_INT)    0.0000          (X_U4.XU2.VCC_INT)    0.0000              
+
+(X_U5.UTOP_N01929)    5.0000          (X_U5.UTOP_N01993)    0.0000              
+
+(X_U5.UTOP_N02173)    5.0000          (X_U5.UTOP_N02203)    5.0000              
+
+(X_U5.UTOP_N02535)    1.0000          (X_U5.UTOP_N03195)    5.0000              
+
+(X_U6.UTOP_N01929)    5.0000          (X_U6.UTOP_N01993)    0.0000              
+
+(X_U6.UTOP_N02173)    5.0000          (X_U6.UTOP_N02203)    5.0000              
+
+(X_U6.UTOP_N02535)    1.0000          (X_U6.UTOP_N03195)    5.0000              
+
+(X_U5.UTOP_N339734)    5.0000         (X_U5.UTOP_N397400)    1.0000             
+
+(X_U5.UTOP_N492602)    0.0000         (X_U5.UTOP_N496067)    0.0000             
+
+(X_U6.UTOP_N339734)    5.0000         (X_U6.UTOP_N397400)    1.0000             
+
+(X_U6.UTOP_N492602)-17.76E-09         (X_U6.UTOP_N496067)    0.0000             
+
+(X_U3.XU1.N16769409)    2.0000        (X_U3.XU2.N16769409)    2.0000            
+
+(X_U3.XU3.N16766925)    0.0000        (X_U3.XU5.N16771405)-172.5E-15            
+
+(X_U3.XU5.N16771631)-17.25E-09        (X_U3.XU5.N16774625)-17.74E-09            
+
+(X_U3.XU5.N16776225)-17.25E-09        (X_U3.XU5.N16776248)-17.25E-09            
+
+(X_U3.XU5.N16777893)    0.0000        (X_U4.XU1.N16769409)    2.0000            
+
+(X_U4.XU2.N16769409)    2.0000        (X_U4.XU3.N16766925)    0.0000            
+
+(X_U4.XU5.N16771405)    0.0000        (X_U4.XU5.N16771631)-45.04E-27            
+
+(X_U4.XU5.N16774625)    0.0000        (X_U4.XU5.N16776225)-45.04E-27            
+
+(X_U4.XU5.N16776248)-45.04E-27        (X_U4.XU5.N16777893)    0.0000            
+
+(X_U5.UTOP_GATE_INT) 104.0E-09        (X_U5.UTOP_VNEG_14V)-155.6E-09            
+
+(X_U6.UTOP_GATE_INT) 120.9E-09        (X_U6.UTOP_VNEG_14V)-155.6E-09            
+
+(X_U5.UTOP_DRAIN_INT)-17.76E-09       (X_U5.UTOP_IN_INTREF)-45.04E-27           
+
+(X_U5.UTOP_I_FAULT_Z)    1.0000       (X_U5.UTOP_I_LIMIT_Z)    1.0000           
+
+(X_U6.UTOP_DRAIN_INT) 85.55E-09       (X_U6.UTOP_IN_INTREF) 502.6E-12           
+
+(X_U6.UTOP_I_FAULT_Z)    1.0000       (X_U6.UTOP_I_LIMIT_Z)    1.0000           
+
+(X_U5.UTOP_GATE_DRV_T)    0.0000      (X_U5.UTOP_I_DETECT_T)-60.56E-06          
+
+(X_U5.UTOP_LDO_5V_INT)    0.0000      (X_U5.UTOP_SOURCE_INT) 1.602E-09          
+
+(X_U5.X_UTOP_U1.YINT1)    0.0000      (X_U5.X_UTOP_U1.YINT2)    0.0000          
+
+(X_U5.X_UTOP_U1.YINT3)    0.0000      (X_U5.X_UTOP_U97.YINT)    1.0000          
+
+(X_U5.X_UTOP_U99.YINT)    1.0000      (X_U6.UTOP_GATE_DRV_T)    0.0000          
+
+(X_U6.UTOP_I_DETECT_T)-85.55E-09      (X_U6.UTOP_LDO_5V_INT)    0.0000          
+
+(X_U6.UTOP_SOURCE_INT) 70.32E-09      (X_U6.X_UTOP_U1.YINT1)    0.0000          
+
+(X_U6.X_UTOP_U1.YINT2)    0.0000      (X_U6.X_UTOP_U1.YINT3)    0.0000          
+
+(X_U6.X_UTOP_U97.YINT)    1.0000      (X_U6.X_UTOP_U99.YINT)    1.0000          
+
+(X_U5.UTOP_FAULT_Z_TOP)    1.0000     (X_U5.UTOP_U_Ilim1_ONE)    1.0000         
+
+(X_U5.UTOP_VDD_SHIFTED)    0.0000     (X_U5.X_UTOP_U118.OUTx)    0.0000         
+
+(X_U6.UTOP_FAULT_Z_TOP)    1.0000     (X_U6.UTOP_U_Ilim1_ONE)    1.0000         
+
+(X_U6.UTOP_VDD_SHIFTED)    0.0000     (X_U6.X_UTOP_U118.OUTx)-17.76E-09         
+
+(X_U5.UTOP_U_Fault1_ONE)    1.0000    (X_U6.UTOP_U_Fault1_ONE)    1.0000        
+
+(X_U5.UTOP_IN_DLY_INTREF)    0.0000   (X_U5.X_UTOP_U_GAN_FET.d)    -.0604       
+
+(X_U5.X_UTOP_U_GAN_FET.g) 104.0E-09   (X_U5.X_UTOP_U_GAN_FET.s) 91.16E-09       
+
+(X_U6.UTOP_IN_DLY_INTREF)    0.0000   (X_U6.X_UTOP_U_GAN_FET.d)    -.0604       
+
+(X_U6.X_UTOP_U_GAN_FET.g) 120.9E-09   (X_U6.X_UTOP_U_GAN_FET.s) 159.9E-09       
+
+(X_U5.UTOP_LDMOS_GATE_TOP)    1.0000  (X_U5.UTOP_U_Fault1_FAULT)    0.0000      
+
+(X_U5.UTOP_U_PWM_Temp_INM)    0.0000  (X_U5.UTOP_U_PWM_Temp_INP)     .0420      
+
+(X_U5.X_UTOP_U_GAN_FET.dx)    -.0604  (X_U6.UTOP_LDMOS_GATE_TOP)    1.0000      
+
+(X_U6.UTOP_U_Fault1_FAULT)    0.0000  (X_U6.UTOP_U_PWM_Temp_INM)    0.0000      
+
+(X_U6.UTOP_U_PWM_Temp_INP)     .0420  (X_U6.X_UTOP_U_GAN_FET.dx)    -.0604      
+
+(X_U5.UTOP_U_Driver_N00597)   14.0000 (X_U5.UTOP_U_Driver_N00691)   14.1440     
+
+(X_U5.UTOP_U_Driver_N00695)   14.0000 (X_U5.UTOP_U_Driver_N01123)    0.0000     
+
+(X_U5.X_UTOP_U_Ilim1_U95.1)    0.0000 (X_U6.UTOP_U_Driver_N00597)   14.0000     
+
+(X_U6.UTOP_U_Driver_N00691)   14.1440 (X_U6.UTOP_U_Driver_N00695)   14.0000     
+
+(X_U6.UTOP_U_Driver_N01123)    0.0000 (X_U6.X_UTOP_U_Ilim1_U95.1)    0.0000     
+
+(X_U5.X_UTOP_U_Fault1_U99.1)    1.0000                                          
+
+(X_U5.X_UTOP_U_Ilim1_U113.1)    0.0000                                          
+
+(X_U5.X_UTOP_U_Ilim1_U62.CH)    1.0000                                          
+
+(X_U5.X_UTOP_U_Ilim1_U63.CH)    0.0000                                          
+
+(X_U6.X_UTOP_U_Fault1_U99.1)    1.0000                                          
+
+(X_U6.X_UTOP_U_Ilim1_U113.1)    0.0000                                          
+
+(X_U6.X_UTOP_U_Ilim1_U62.CH)    1.0000                                          
+
+(X_U6.X_UTOP_U_Ilim1_U63.CH)    0.0000                                          
+
+(X_U5.UTOP_U_Fault1_ABS_VNEG) 155.6E-09                                         
+
+(X_U5.UTOP_U_Fault1_ALL_GOOD)    0.0000                                         
+
+(X_U5.UTOP_U_Fault1_UVLO_LDO)    1.0000                                         
+
+(X_U5.UTOP_U_Fault1_UVLO_VDD)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16792069)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16843199)     .7692                                         
+
+(X_U5.UTOP_U_Ilim1_N16859356)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16859379)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16859418)     .0100                                         
+
+(X_U5.UTOP_U_Ilim1_N16859462)   95.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16859468)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16859491) 216.9E-24                                         
+
+(X_U5.UTOP_U_Ilim1_N16860466)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16866362)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16866694)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16887220)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16887227)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16888720)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16888723)   70.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16888739)     .0100                                         
+
+(X_U5.UTOP_U_Ilim1_N16889539)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16889804)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16889838)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16889841)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16889853)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16889897)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16890525)    1.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16890541)    0.0000                                         
+
+(X_U5.UTOP_U_Ilim1_N16890960)    0.0000                                         
+
+(X_U5.X_UTOP_U_Fault1_U100.1)    1.0000                                         
+
+(X_U5.X_UTOP_U_Fault1_U101.1)    1.0000                                         
+
+(X_U5.X_UTOP_U_Ilim1_U117.CH)    1.0000                                         
+
+(X_U5.X_UTOP_U_Ilim1_U119.CH)    0.0000                                         
+
+(X_U6.UTOP_U_Fault1_ABS_VNEG) 155.6E-09                                         
+
+(X_U6.UTOP_U_Fault1_ALL_GOOD)    0.0000                                         
+
+(X_U6.UTOP_U_Fault1_UVLO_LDO)    1.0000                                         
+
+(X_U6.UTOP_U_Fault1_UVLO_VDD)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16792069)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16843199)     .7692                                         
+
+(X_U6.UTOP_U_Ilim1_N16859356)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16859379)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16859418)     .0100                                         
+
+(X_U6.UTOP_U_Ilim1_N16859462)   95.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16859468)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16859491) 216.9E-24                                         
+
+(X_U6.UTOP_U_Ilim1_N16860466)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16866362)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16866694)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16887220)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16887227)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16888720)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16888723)   70.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16888739)     .0100                                         
+
+(X_U6.UTOP_U_Ilim1_N16889539)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16889804)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16889838)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16889841)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16889853)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16889897)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16890525)    1.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16890541)    0.0000                                         
+
+(X_U6.UTOP_U_Ilim1_N16890960)    0.0000                                         
+
+(X_U6.X_UTOP_U_Fault1_U100.1)    1.0000                                         
+
+(X_U6.X_UTOP_U_Fault1_U101.1)    1.0000                                         
+
+(X_U6.X_UTOP_U_Ilim1_U117.CH)    1.0000                                         
+
+(X_U6.X_UTOP_U_Ilim1_U119.CH)    0.0000                                         
+
+(X_U5.UTOP_U_Driver_GATE_DRVZ)    1.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16777500)     .5000                                        
+
+(X_U5.UTOP_U_Fault1_N16777536)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16777550)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16777668)     .5000                                        
+
+(X_U5.UTOP_U_Fault1_N16779894)    9.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16780478)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16785958)    1.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16792825)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16799356)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16800340)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16802625)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_N16809735)     .7900                                        
+
+(X_U5.UTOP_U_Fault1_N16809754)    4.5500                                        
+
+(X_U5.UTOP_U_Fault1_N16820331)   12.3000                                        
+
+(X_U5.UTOP_U_Fault1_N16859326)    0.0000                                        
+
+(X_U5.UTOP_U_Fault1_UVLO_VNEG)    1.0000                                        
+
+(X_U5.UTOP_U_Ilim1_ILIM_RESET)    0.0000                                        
+
+(X_U5.UTOP_U_Supplies2_N15861)     .1000                                        
+
+(X_U5.UTOP_U_Supplies2_N15941)    9.5000                                        
+
+(X_U5.UTOP_U_Supplies2_N17859)     .1000                                        
+
+(X_U5.UTOP_U_Supplies2_N17939)    4.5000                                        
+
+(X_U5.UTOP_U_Supplies2_N20213)    0.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U112.MY5)    1.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U112.Qbr)    1.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U112.Qqq) 2.002E-15                                        
+
+(X_U5.X_UTOP_U_Ilim1_U121.MY5)    1.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U121.Qbr)    1.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U121.Qqq) 2.002E-15                                        
+
+(X_U5.X_UTOP_U_Ilim1_U62.MEAS)    1.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U63.MEAS)    0.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U92.YINT)    0.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U93.YINT)    0.0000                                        
+
+(X_U5.X_UTOP_U_Ilim1_U95.INM1)   47.4980                                        
+
+(X_U5.X_UTOP_U_Ilim1_U95.INM2)   47.5030                                        
+
+(X_U5.X_UTOP_U_Ilim1_U95.INP1)  -47.5030                                        
+
+(X_U6.UTOP_U_Driver_GATE_DRVZ)    1.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16777500)     .5000                                        
+
+(X_U6.UTOP_U_Fault1_N16777536)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16777550)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16777668)     .5000                                        
+
+(X_U6.UTOP_U_Fault1_N16779894)    9.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16780478)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16785958)    1.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16792825)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16799356)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16800340)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16802625)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_N16809735)     .7900                                        
+
+(X_U6.UTOP_U_Fault1_N16809754)    4.5500                                        
+
+(X_U6.UTOP_U_Fault1_N16820331)   12.3000                                        
+
+(X_U6.UTOP_U_Fault1_N16859326)    0.0000                                        
+
+(X_U6.UTOP_U_Fault1_UVLO_VNEG)    1.0000                                        
+
+(X_U6.UTOP_U_Ilim1_ILIM_RESET)    0.0000                                        
+
+(X_U6.UTOP_U_Supplies2_N15861)     .1000                                        
+
+(X_U6.UTOP_U_Supplies2_N15941)    9.5000                                        
+
+(X_U6.UTOP_U_Supplies2_N17859)     .1000                                        
+
+(X_U6.UTOP_U_Supplies2_N17939)    4.5000                                        
+
+(X_U6.UTOP_U_Supplies2_N20213)    0.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U112.MY5)    1.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U112.Qbr)    1.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U112.Qqq) 2.002E-15                                        
+
+(X_U6.X_UTOP_U_Ilim1_U121.MY5)    1.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U121.Qbr)    1.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U121.Qqq) 2.002E-15                                        
+
+(X_U6.X_UTOP_U_Ilim1_U62.MEAS)    1.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U63.MEAS)    0.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U92.YINT)    0.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U93.YINT)    0.0000                                        
+
+(X_U6.X_UTOP_U_Ilim1_U95.INM1)   47.4980                                        
+
+(X_U6.X_UTOP_U_Ilim1_U95.INM2)   47.5030                                        
+
+(X_U6.X_UTOP_U_Ilim1_U95.INP1)  -47.5030                                        
+
+(X_U5.UTOP_U_PWM_Temp_COMP_OUT)    1.0000                                       
+
+(X_U5.X_UTOP_U_Fault1_U111.MY5)    1.0000                                       
+
+(X_U5.X_UTOP_U_Fault1_U111.Qbr)    1.0000                                       
+
+(X_U5.X_UTOP_U_Fault1_U111.Qqq)     .0100                                       
+
+(X_U5.X_UTOP_U_Fault1_U97.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Fault1_U98.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Fault1_U99.INM1)   -6.0250                                       
+
+(X_U5.X_UTOP_U_Fault1_U99.INM2)   -6.2750                                       
+
+(X_U5.X_UTOP_U_Fault1_U99.INP1)    6.2750                                       
+
+(X_U5.X_UTOP_U_GAN_FET.N350958)   10.0000                                       
+
+(X_U5.X_UTOP_U_GAN_FET.VGS_INT) 102.4E-09                                       
+
+(X_U5.X_UTOP_U_Ilim1_U102.YINT)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U111.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U112.Qint) 2.002E-15                                       
+
+(X_U5.X_UTOP_U_Ilim1_U113.INM1)   34.9980                                       
+
+(X_U5.X_UTOP_U_Ilim1_U113.INM2)   35.0030                                       
+
+(X_U5.X_UTOP_U_Ilim1_U113.INP1)  -35.0030                                       
+
+(X_U5.X_UTOP_U_Ilim1_U114.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U116.YINT)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U117.MEAS)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U118.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U119.MEAS)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U121.Qint) 2.002E-15                                       
+
+(X_U5.X_UTOP_U_Ilim1_U124.YINT)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U62.RESET)    0.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U63.RESET)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U99.YINT1)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U99.YINT2)    1.0000                                       
+
+(X_U5.X_UTOP_U_Ilim1_U99.YINT3)    1.0000                                       
+
+(X_U5.X_UTOP_U_Supplies2_U95.1)    0.0000                                       
+
+(X_U5.X_UTOP_U_Supplies2_U96.1)    0.0000                                       
+
+(X_U6.UTOP_U_PWM_Temp_COMP_OUT)    1.0000                                       
+
+(X_U6.X_UTOP_U_Fault1_U111.MY5)    1.0000                                       
+
+(X_U6.X_UTOP_U_Fault1_U111.Qbr)    1.0000                                       
+
+(X_U6.X_UTOP_U_Fault1_U111.Qqq)     .0100                                       
+
+(X_U6.X_UTOP_U_Fault1_U97.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Fault1_U98.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Fault1_U99.INM1)   -6.0250                                       
+
+(X_U6.X_UTOP_U_Fault1_U99.INM2)   -6.2750                                       
+
+(X_U6.X_UTOP_U_Fault1_U99.INP1)    6.2750                                       
+
+(X_U6.X_UTOP_U_GAN_FET.N350958)   10.0000                                       
+
+(X_U6.X_UTOP_U_GAN_FET.VGS_INT) 50.63E-09                                       
+
+(X_U6.X_UTOP_U_Ilim1_U102.YINT)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U111.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U112.Qint) 2.002E-15                                       
+
+(X_U6.X_UTOP_U_Ilim1_U113.INM1)   34.9980                                       
+
+(X_U6.X_UTOP_U_Ilim1_U113.INM2)   35.0030                                       
+
+(X_U6.X_UTOP_U_Ilim1_U113.INP1)  -35.0030                                       
+
+(X_U6.X_UTOP_U_Ilim1_U114.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U116.YINT)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U117.MEAS)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U118.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U119.MEAS)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U121.Qint) 2.002E-15                                       
+
+(X_U6.X_UTOP_U_Ilim1_U124.YINT)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U62.RESET)    0.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U63.RESET)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U99.YINT1)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U99.YINT2)    1.0000                                       
+
+(X_U6.X_UTOP_U_Ilim1_U99.YINT3)    1.0000                                       
+
+(X_U6.X_UTOP_U_Supplies2_U95.1)    0.0000                                       
+
+(X_U6.X_UTOP_U_Supplies2_U96.1)    0.0000                                       
+
+(X_U5.UTOP_U_Ilim1_ISHORT_RESET)    0.0000                                      
+
+(X_U5.UTOP_U_Supplies2_LDO_GOOD)    0.0000                                      
+
+(X_U5.X_UTOP_U_Driver_U103.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Driver_U106.YINT)    1.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U100.INM1)   -4.3750                                      
+
+(X_U5.X_UTOP_U_Fault1_U100.INM2)   -4.6250                                      
+
+(X_U5.X_UTOP_U_Fault1_U100.INP1)    4.6250                                      
+
+(X_U5.X_UTOP_U_Fault1_U101.INM1)   -2.0775                                      
+
+(X_U5.X_UTOP_U_Fault1_U101.INM2)   -2.4725                                      
+
+(X_U5.X_UTOP_U_Fault1_U101.INP1)    2.4725                                      
+
+(X_U5.X_UTOP_U_Fault1_U102.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U103.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U104.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U106.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U109.YINT)    1.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U110.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Fault1_U111.Qint)     .0100                                      
+
+(X_U5.X_UTOP_U_Fault1_U112.YINT)    0.0000                                      
+
+(X_U5.X_UTOP_U_GAN_FET.COMP_OUT)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U100.YINT1)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U100.YINT2)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U100.YINT3)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U112.MYVSS)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U112.Qqqd1)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U117.RESET)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U119.RESET)    1.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U121.MYVSS)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U121.Qqqd1)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U122.YINT1)    1.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U122.YINT2)    1.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U122.YINT3)    1.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U125.YINT1)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U125.YINT2)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U125.YINT3)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U62.RESET2)    0.0000                                      
+
+(X_U5.X_UTOP_U_Ilim1_U63.RESET2)    1.0000                                      
+
+(X_U6.UTOP_U_Ilim1_ISHORT_RESET)    0.0000                                      
+
+(X_U6.UTOP_U_Supplies2_LDO_GOOD)    0.0000                                      
+
+(X_U6.X_UTOP_U_Driver_U103.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Driver_U106.YINT)    1.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U100.INM1)   -4.3750                                      
+
+(X_U6.X_UTOP_U_Fault1_U100.INM2)   -4.6250                                      
+
+(X_U6.X_UTOP_U_Fault1_U100.INP1)    4.6250                                      
+
+(X_U6.X_UTOP_U_Fault1_U101.INM1)   -2.0775                                      
+
+(X_U6.X_UTOP_U_Fault1_U101.INM2)   -2.4725                                      
+
+(X_U6.X_UTOP_U_Fault1_U101.INP1)    2.4725                                      
+
+(X_U6.X_UTOP_U_Fault1_U102.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U103.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U104.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U106.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U109.YINT)    1.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U110.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Fault1_U111.Qint)     .0100                                      
+
+(X_U6.X_UTOP_U_Fault1_U112.YINT)    0.0000                                      
+
+(X_U6.X_UTOP_U_GAN_FET.COMP_OUT)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U100.YINT1)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U100.YINT2)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U100.YINT3)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U112.MYVSS)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U112.Qqqd1)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U117.RESET)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U119.RESET)    1.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U121.MYVSS)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U121.Qqqd1)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U122.YINT1)    1.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U122.YINT2)    1.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U122.YINT3)    1.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U125.YINT1)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U125.YINT2)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U125.YINT3)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U62.RESET2)    0.0000                                      
+
+(X_U6.X_UTOP_U_Ilim1_U63.RESET2)    1.0000                                      
+
+(X_U5.UTOP_U_Driver_U_Rsr_N02774)    1.2000                                     
+
+(X_U5.UTOP_U_Driver_U_Rsr_N15834) 60.00E-06                                     
+
+(X_U5.UTOP_U_Supplies2_U_LDO_VXX)    0.0000                                     
+
+(X_U5.UTOP_U_Supplies2_U_LDO_VYY)    0.0000                                     
+
+(X_U5.UTOP_U_Supplies2_U_LDO_VZZ)    0.0000                                     
+
+(X_U5.X_UTOP_U_Driver_U105.YINT1)    0.0000                                     
+
+(X_U5.X_UTOP_U_Driver_U105.YINT2)    0.0000                                     
+
+(X_U5.X_UTOP_U_Driver_U105.YINT3)    0.0000                                     
+
+(X_U5.X_UTOP_U_Fault1_U105.YINT1)    0.0000                                     
+
+(X_U5.X_UTOP_U_Fault1_U105.YINT2)    0.0000                                     
+
+(X_U5.X_UTOP_U_Fault1_U105.YINT3)    0.0000                                     
+
+(X_U5.X_UTOP_U_Fault1_U111.MYVSS)    0.0000                                     
+
+(X_U5.X_UTOP_U_Fault1_U111.Qqqd1)    0.0000                                     
+
+(X_U5.X_UTOP_U_Ilim1_U117.RESET2)    0.0000                                     
+
+(X_U5.X_UTOP_U_Ilim1_U119.RESET2)    1.0000                                     
+
+(X_U6.UTOP_U_Driver_U_Rsr_N02774)    1.2000                                     
+
+(X_U6.UTOP_U_Driver_U_Rsr_N15834) 60.00E-06                                     
+
+(X_U6.UTOP_U_Supplies2_U_LDO_VXX)    0.0000                                     
+
+(X_U6.UTOP_U_Supplies2_U_LDO_VYY)    0.0000                                     
+
+(X_U6.UTOP_U_Supplies2_U_LDO_VZZ)    0.0000                                     
+
+(X_U6.X_UTOP_U_Driver_U105.YINT1)    0.0000                                     
+
+(X_U6.X_UTOP_U_Driver_U105.YINT2)    0.0000                                     
+
+(X_U6.X_UTOP_U_Driver_U105.YINT3)    0.0000                                     
+
+(X_U6.X_UTOP_U_Fault1_U105.YINT1)    0.0000                                     
+
+(X_U6.X_UTOP_U_Fault1_U105.YINT2)    0.0000                                     
+
+(X_U6.X_UTOP_U_Fault1_U105.YINT3)    0.0000                                     
+
+(X_U6.X_UTOP_U_Fault1_U111.MYVSS)    0.0000                                     
+
+(X_U6.X_UTOP_U_Fault1_U111.Qqqd1)    0.0000                                     
+
+(X_U6.X_UTOP_U_Ilim1_U117.RESET2)    0.0000                                     
+
+(X_U6.X_UTOP_U_Ilim1_U119.RESET2)    1.0000                                     
+
+(X_U5.UTOP_U_Supplies2_ENABLE_LDO)    0.0000                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N17647)   16.0000                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N17671) 155.6E-09                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N17937)    1.0000                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N17995)    0.0000                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N18091) 155.6E-09                                    
+
+(X_U5.X_UTOP_U_Fault1_U111.CLKdel)    0.0000                                    
+
+(X_U5.X_UTOP_U_Fault1_U111.CLKint)    0.0000                                    
+
+(X_U5.X_UTOP_U_Ilim1_U112.X3.YINT)    0.0000                                    
+
+(X_U5.X_UTOP_U_Ilim1_U121.X3.YINT)    0.0000                                    
+
+(X_U5.X_UTOP_U_PWM_Temp_AND1.YINT)    0.0000                                    
+
+(X_U5.X_UTOP_U_Supplies2_U95.INM1)    4.7250                                    
+
+(X_U5.X_UTOP_U_Supplies2_U95.INM2)    4.7750                                    
+
+(X_U5.X_UTOP_U_Supplies2_U95.INP1)   -4.7750                                    
+
+(X_U5.X_UTOP_U_Supplies2_U96.INM1)    2.2250                                    
+
+(X_U5.X_UTOP_U_Supplies2_U96.INM2)    2.2750                                    
+
+(X_U5.X_UTOP_U_Supplies2_U96.INP1)   -2.2750                                    
+
+(X_U6.UTOP_U_Supplies2_ENABLE_LDO)    0.0000                                    
+
+(X_U6.UTOP_U_Supplies2_UBB_N17647)   16.0000                                    
+
+(X_U6.UTOP_U_Supplies2_UBB_N17671) 155.6E-09                                    
+
+(X_U6.UTOP_U_Supplies2_UBB_N17937)    1.0000                                    
+
+(X_U6.UTOP_U_Supplies2_UBB_N17995)    0.0000                                    
+
+(X_U6.UTOP_U_Supplies2_UBB_N18091) 155.6E-09                                    
+
+(X_U6.X_UTOP_U_Fault1_U111.CLKdel)    0.0000                                    
+
+(X_U6.X_UTOP_U_Fault1_U111.CLKint)    0.0000                                    
+
+(X_U6.X_UTOP_U_Ilim1_U112.X3.YINT)    0.0000                                    
+
+(X_U6.X_UTOP_U_Ilim1_U121.X3.YINT)    0.0000                                    
+
+(X_U6.X_UTOP_U_PWM_Temp_AND1.YINT)    0.0000                                    
+
+(X_U6.X_UTOP_U_Supplies2_U95.INM1)    4.7250                                    
+
+(X_U6.X_UTOP_U_Supplies2_U95.INM2)    4.7750                                    
+
+(X_U6.X_UTOP_U_Supplies2_U95.INP1)   -4.7750                                    
+
+(X_U6.X_UTOP_U_Supplies2_U96.INM1)    2.2250                                    
+
+(X_U6.X_UTOP_U_Supplies2_U96.INM2)    2.2750                                    
+
+(X_U6.X_UTOP_U_Supplies2_U96.INP1)   -2.2750                                    
+
+(X_U5.UTOP_U_Supplies2_UBB_N336878) 155.6E-09                                   
+
+(X_U5.UTOP_U_Supplies2_UBB_N348226)     .0100                                   
+
+(X_U5.UTOP_U_Supplies2_UBB_N348306)    4.0000                                   
+
+(X_U5.UTOP_U_Supplies2_UBB_N348326)    1.0000                                   
+
+(X_U5.X_UTOP_U_Fault1_U111.X1.YINT)    0.0000                                   
+
+(X_U5.X_UTOP_U_Fault1_U111.X2.YINT)    0.0000                                   
+
+(X_U5.X_UTOP_U_GAN_FET.X_U103.Yint)    0.0000                                   
+
+(X_U5.X_UTOP_U_PWM_Temp_COMP1.Yint)    1.0000                                   
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U95.1)    1.0000                                   
+
+(X_U6.UTOP_U_Supplies2_UBB_N336878) 155.6E-09                                   
+
+(X_U6.UTOP_U_Supplies2_UBB_N348226)     .0100                                   
+
+(X_U6.UTOP_U_Supplies2_UBB_N348306)    4.0000                                   
+
+(X_U6.UTOP_U_Supplies2_UBB_N348326)    1.0000                                   
+
+(X_U6.X_UTOP_U_Fault1_U111.X1.YINT)    0.0000                                   
+
+(X_U6.X_UTOP_U_Fault1_U111.X2.YINT)    0.0000                                   
+
+(X_U6.X_UTOP_U_GAN_FET.X_U103.Yint)    0.0000                                   
+
+(X_U6.X_UTOP_U_PWM_Temp_COMP1.Yint)    1.0000                                   
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U95.1)    1.0000                                   
+
+(X_U5.X_UTOP_U_Fault1_U111.X3.YINT1)    0.0000                                  
+
+(X_U5.X_UTOP_U_Fault1_U111.X3.YINT2)    0.0000                                  
+
+(X_U5.X_UTOP_U_Fault1_U111.X3.YINT3)    0.0000                                  
+
+(X_U6.X_UTOP_U_Fault1_U111.X3.YINT1)    0.0000                                  
+
+(X_U6.X_UTOP_U_Fault1_U111.X3.YINT2)    0.0000                                  
+
+(X_U6.X_UTOP_U_Fault1_U111.X3.YINT3)    0.0000                                  
+
+(X_U5.UTOP_U_Supplies2_LPM_B_SHIFTED)    5.0000                                 
+
+(X_U5.UTOP_U_Supplies2_U_LDO_N245745)    0.0000                                 
+
+(X_U5.UTOP_U_Supplies2_U_LDO_N245781)    0.0000                                 
+
+(X_U5.UTOP_U_Supplies2_U_LDO_N246201)    0.0000                                 
+
+(X_U6.UTOP_U_Supplies2_LPM_B_SHIFTED)    5.0000                                 
+
+(X_U6.UTOP_U_Supplies2_U_LDO_N245745)    0.0000                                 
+
+(X_U6.UTOP_U_Supplies2_U_LDO_N245781)    0.0000                                 
+
+(X_U6.UTOP_U_Supplies2_U_LDO_N246201)    0.0000                                 
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U95.INM1)    -.4975                                
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U95.INM2)    -.5025                                
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U95.INP1)     .5025                                
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U95.INM1)    -.4975                                
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U95.INM2)    -.5025                                
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U95.INP1)     .5025                                
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N05348)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N05382)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N08164)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N09035)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N09745)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N11113)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N12664)     .0750                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N12783)    1.2000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N13377)    0.0000                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N29526)     .0750                               
+
+(X_U5.UTOP_U_Supplies2_U_LDO_U1_N29538)    1.2000                               
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U102.YINT)    1.0000                               
+
+(X_U5.X_UTOP_U_Supplies2_UBB_U103.YINT)    0.0000                               
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U1.1)    0.0000                               
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U2.1)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N05348)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N05382)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N08164)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N09035)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N09745)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N11113)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N12664)     .0750                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N12783)    1.2000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N13377)    0.0000                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N29526)     .0750                               
+
+(X_U6.UTOP_U_Supplies2_U_LDO_U1_N29538)    1.2000                               
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U102.YINT)    1.0000                               
+
+(X_U6.X_UTOP_U_Supplies2_UBB_U103.YINT)    0.0000                               
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U1.1)    0.0000                               
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U2.1)    0.0000                               
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U1.INM1)    1.2000                            
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U1.INP1)    0.0000                            
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U1.INP2)    0.0000                            
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U2.INM1)    1.2000                            
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U2.INP1)    0.0000                            
+
+(X_U5.X_UTOP_U_Supplies2_U_LDO_U1_U2.INP2)    0.0000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U1.INM1)    1.2000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U1.INP1)    0.0000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U1.INP2)    0.0000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U2.INM1)    1.2000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U2.INP1)    0.0000                            
+
+(X_U6.X_UTOP_U_Supplies2_U_LDO_U1_U2.INP2)    0.0000     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4         8.555E-08
+    V_V5         0.000E+00
+    V_V6         0.000E+00
+    V_V7         0.000E+00
+    V_V8         0.000E+00
+    V_V9         0.000E+00
+    X_U5.V_UTOP_U_Ilim1_V36   0.000E+00
+    X_U5.V_UTOP_U_Ilim1_V5   0.000E+00
+    X_U5.V_UTOP_U_Ilim1_V37   0.000E+00
+    X_U5.V_UTOP_U_Ilim1_V38   0.000E+00
+    X_U5.V_UTOP_U_Ilim1_V4  -1.769E-06
+    X_U5.V_UTOP_U_Fault1_V12   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V8   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V7   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V9   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V19   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V10   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V5   0.000E+00
+    X_U5.V_UTOP_U_Fault1_V11   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_U_LDO_U1_V2   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_U_LDO_U1_V3   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_U_LDO_U1_V1   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_U_LDO_U1_V4   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_V6   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_UBB_V36   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_UBB_V5   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_UBB_V6  -1.000E-04
+    X_U5.V_UTOP_U_Supplies2_V37   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_V5   0.000E+00
+    X_U5.V_UTOP_U_Supplies2_V36   0.000E+00
+    X_U5.V_UTOP_U_Driver_U_Rsr_V10  -6.000E-05
+    X_U5.V_UTOP_U_Driver_V11  -2.169E-04
+    X_U5.V_UTOP_V15   0.000E+00
+    X_U5.V_UTOP_U_PWM_Temp_VRAMP1   0.000E+00
+    X_U5.V_UTOP_V16   0.000E+00
+    X_U6.V_UTOP_U_Ilim1_V36   0.000E+00
+    X_U6.V_UTOP_U_Ilim1_V5   0.000E+00
+    X_U6.V_UTOP_U_Ilim1_V37   0.000E+00
+    X_U6.V_UTOP_U_Ilim1_V38   0.000E+00
+    X_U6.V_UTOP_U_Ilim1_V4  -1.769E-06
+    X_U6.V_UTOP_U_Fault1_V12   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V8   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V7   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V9   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V19   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V10   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V5   0.000E+00
+    X_U6.V_UTOP_U_Fault1_V11   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_U_LDO_U1_V2   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_U_LDO_U1_V3   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_U_LDO_U1_V1   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_U_LDO_U1_V4   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_V6   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_UBB_V36   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_UBB_V5   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_UBB_V6  -1.000E-04
+    X_U6.V_UTOP_U_Supplies2_V37   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_V5   0.000E+00
+    X_U6.V_UTOP_U_Supplies2_V36   0.000E+00
+    X_U6.V_UTOP_U_Driver_U_Rsr_V10  -6.000E-05
+    X_U6.V_UTOP_U_Driver_V11  -2.169E-04
+    X_U6.V_UTOP_V15   0.000E+00
+    X_U6.V_UTOP_U_PWM_Temp_VRAMP1   0.000E+00
+    X_U6.V_UTOP_V16   0.000E+00
+    X_U3.XU1.V_V1   0.000E+00
+    X_U3.XU2.V_V1   0.000E+00
+    X_U4.XU1.V_V1   0.000E+00
+    X_U4.XU2.V_V1   0.000E+00
+    X_U5.X_UTOP_U_Ilim1_U112.V1  -1.001E-12
+    X_U5.X_UTOP_U_Ilim1_U112.V2   2.776E-27
+    X_U5.X_UTOP_U_Ilim1_U121.V1  -1.001E-12
+    X_U5.X_UTOP_U_Ilim1_U121.V2   2.776E-27
+    X_U5.X_UTOP_U_Fault1_U111.V1  -9.910E-13
+    X_U5.X_UTOP_U_Fault1_U111.V2   1.098E-14
+    X_U5.X_UTOP_U_Supplies2_U_LDO_F1.VF_UTOP_U_Supplies2_U_LDO_F1   0.000E+00
+    X_U5.X_UTOP_U_Driver_U_Rsr_H1.VH_UTOP_U_Driver_U_Rsr_H1   6.000E-05
+    X_U5.X_UTOP_U_Driver_F5.VF_UTOP_U_Driver_F5   2.169E-04
+    X_U5.X_UTOP_H2.VH_UTOP_H2  -6.056E-05
+    X_U5.X_UTOP_U_GAN_FET.V_V37   0.000E+00
+    X_U6.X_UTOP_U_Ilim1_U112.V1  -1.001E-12
+    X_U6.X_UTOP_U_Ilim1_U112.V2   2.776E-27
+    X_U6.X_UTOP_U_Ilim1_U121.V1  -1.001E-12
+    X_U6.X_UTOP_U_Ilim1_U121.V2   2.776E-27
+    X_U6.X_UTOP_U_Fault1_U111.V1  -9.910E-13
+    X_U6.X_UTOP_U_Fault1_U111.V2   1.098E-14
+    X_U6.X_UTOP_U_Supplies2_U_LDO_F1.VF_UTOP_U_Supplies2_U_LDO_F1   0.000E+00
+    X_U6.X_UTOP_U_Driver_U_Rsr_H1.VH_UTOP_U_Driver_U_Rsr_H1   6.000E-05
+    X_U6.X_UTOP_U_Driver_F5.VF_UTOP_U_Driver_F5   2.169E-04
+    X_U6.X_UTOP_H2.VH_UTOP_H2  -8.555E-08
+    X_U6.X_UTOP_U_GAN_FET.V_V37   0.000E+00
+
+    TOTAL POWER DISSIPATION   9.42E-03  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+
+          JOB CONCLUDED
+
+**** 12/12/22 14:43:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test2"  [ C:\Users\a0488390\Documents\bitbucket_repos\lmg3522r030\LMG3522R030_pspice\synchronous buck_new-PS
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       20.02
+  Total job time (using Solver 1)   =      215.81
+
